@@ -1,0 +1,625 @@
+CRITICAL - 2025-01-15 07:25:01 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "rooms_view.php"
+[Method: GET, Route: room]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('rooms_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('rooms_view', [], true)
+ 3 APPPATH\Controllers\RoomController.php(15): view('rooms_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RoomController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RoomController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+DEBUG - 2025-01-15 07:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-15 07:25:58 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ro...', 0)
+#1 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ro...')
+#2 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ro...')
+#3 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ro...', Array, false)
+#4 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\app\Controllers\RoomController.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\CodeIgniter.php(933): App\Controllers\RoomController->store()
+#10 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RoomController))
+#11 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\rewrite.php(44): require_once('C:\\Users\\Mahesa...')
+#16 {main}
+CRITICAL - 2025-01-15 07:25:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: room/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `rooms` (`name`, `location`, `capacity`, `created_at`, `updated_at`) VALUES (:name:, :location:, :capacity:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\RoomController.php(44): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RoomController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RoomController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 07:25:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `rooms` (`name`, `location`, `capacity`, `created_at`, `updated_at`) VALUES (\'Mahesa Agung\', \'gedung utama\', \'50\', \'2025-01-15 07:25:58\', \'2025-01-15 07:25:58\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `rooms` (`name`, `location`, `capacity`, `created_at`, `updated_at`) VALUES (\'Mahesa Agung\', \'gedung utama\', \'50\', \'2025-01-15 07:25:58\', \'2025-01-15 07:25:58\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `rooms` (`name`, `location`, `capacity`, `created_at`, `updated_at`) VALUES (:name:, :location:, :capacity:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\RoomController.php(44): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RoomController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RoomController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 07:25:58 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `rooms` (`name`, `location`, `capacity`, `created_at`, `updated_at`) VALUES (\'Mahesa Agung\', \'gedung utama\', \'50\', \'2025-01-15 07:25:58\', \'2025-01-15 07:25:58\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `rooms` (`name`, `location`, `capacity`, `created_at`, `updated_at`) VALUES (\'Mahesa Agung\', \'gedung utama\', \'50\', \'2025-01-15 07:25:58\', \'2025-01-15 07:25:58\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `rooms` (`name`, `location`, `capacity`, `created_at`, `updated_at`) VALUES (\'Mahesa Agung\', \'gedung utama\', \'50\', \'2025-01-15 07:25:58\', \'2025-01-15 07:25:58\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `rooms` (`name`, `location`, `capacity`, `created_at`, `updated_at`) VALUES (:name:, :location:, :capacity:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\RoomController.php(44): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RoomController->store()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RoomController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+DEBUG - 2025-01-15 07:30:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 07:30:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 07:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 07:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 07:34:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 07:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 07:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-15 07:41:08 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ev...', 0)
+#1 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ev...')
+#2 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ev...')
+#3 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ev...', Array, false)
+#4 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\app\Controllers\EventController.php(45): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\CodeIgniter.php(933): App\Controllers\EventController->store()
+#10 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EventController))
+#11 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\rewrite.php(44): require_once('C:\\Users\\Mahesa...')
+#16 {main}
+CRITICAL - 2025-01-15 07:41:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: event/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (:name:, :start_date:, :end_date:, :room_id:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\EventController.php(45): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EventController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EventController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 07:41:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (\'makan\', \'2025-01-16\', \'2025-01-18\', \'2\', \'2025-01-15 07:41:08\', \'2025-01-15 07:41:08\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (\'makan\', \'2025-01-16\', \'2025-01-18\', \'2\', \'2025-01-15 07:41:08\', \'2025-01-15 07:41:08\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (:name:, :start_date:, :end_date:, :room_id:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\EventController.php(45): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EventController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EventController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 07:41:08 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (\'makan\', \'2025-01-16\', \'2025-01-18\', \'2\', \'2025-01-15 07:41:08\', \'2025-01-15 07:41:08\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (\'makan\', \'2025-01-16\', \'2025-01-18\', \'2\', \'2025-01-15 07:41:08\', \'2025-01-15 07:41:08\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (\'makan\', \'2025-01-16\', \'2025-01-18\', \'2\', \'2025-01-15 07:41:08\', \'2025-01-15 07:41:08\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (:name:, :start_date:, :end_date:, :room_id:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\EventController.php(45): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EventController->store()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EventController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+DEBUG - 2025-01-15 07:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-15 07:41:12 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ev...', 0)
+#1 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ev...')
+#2 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ev...')
+#3 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ev...', Array, false)
+#4 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\app\Controllers\EventController.php(45): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\CodeIgniter.php(933): App\Controllers\EventController->store()
+#10 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EventController))
+#11 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\rewrite.php(44): require_once('C:\\Users\\Mahesa...')
+#16 {main}
+CRITICAL - 2025-01-15 07:41:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: event/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (:name:, :start_date:, :end_date:, :room_id:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\EventController.php(45): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EventController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EventController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 07:41:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (\'makan\', \'2025-01-16\', \'2025-01-18\', \'1\', \'2025-01-15 07:41:12\', \'2025-01-15 07:41:12\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (\'makan\', \'2025-01-16\', \'2025-01-18\', \'1\', \'2025-01-15 07:41:12\', \'2025-01-15 07:41:12\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (:name:, :start_date:, :end_date:, :room_id:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\EventController.php(45): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EventController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EventController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 07:41:12 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (\'makan\', \'2025-01-16\', \'2025-01-18\', \'1\', \'2025-01-15 07:41:12\', \'2025-01-15 07:41:12\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (\'makan\', \'2025-01-16\', \'2025-01-18\', \'1\', \'2025-01-15 07:41:12\', \'2025-01-15 07:41:12\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (\'makan\', \'2025-01-16\', \'2025-01-18\', \'1\', \'2025-01-15 07:41:12\', \'2025-01-15 07:41:12\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (:name:, :start_date:, :end_date:, :room_id:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\EventController.php(45): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EventController->store()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EventController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+DEBUG - 2025-01-15 07:41:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 07:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 07:42:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-15 07:42:35 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ev...', 0)
+#1 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ev...')
+#2 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ev...')
+#3 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ev...', Array, false)
+#4 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\app\Controllers\EventController.php(48): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\CodeIgniter.php(933): App\Controllers\EventController->store()
+#10 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EventController))
+#11 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\rewrite.php(44): require_once('C:\\Users\\Mahesa...')
+#16 {main}
+CRITICAL - 2025-01-15 07:42:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: event/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (:name:, :start_date:, :end_date:, :room_id:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\EventController.php(48): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EventController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EventController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 07:42:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (\'Joko\', \'2025-01-16\', \'2025-01-16\', \'1\', \'2025-01-15 07:42:35\', \'2025-01-15 07:42:35\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (\'Joko\', \'2025-01-16\', \'2025-01-16\', \'1\', \'2025-01-15 07:42:35\', \'2025-01-15 07:42:35\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (:name:, :start_date:, :end_date:, :room_id:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\EventController.php(48): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EventController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EventController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 07:42:35 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (\'Joko\', \'2025-01-16\', \'2025-01-16\', \'1\', \'2025-01-15 07:42:35\', \'2025-01-15 07:42:35\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (\'Joko\', \'2025-01-16\', \'2025-01-16\', \'1\', \'2025-01-15 07:42:35\', \'2025-01-15 07:42:35\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (\'Joko\', \'2025-01-16\', \'2025-01-16\', \'1\', \'2025-01-15 07:42:35\', \'2025-01-15 07:42:35\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `events` (`name`, `start_date`, `end_date`, `room_id`, `created_at`, `updated_at`) VALUES (:name:, :start_date:, :end_date:, :room_id:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\EventController.php(48): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EventController->store()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EventController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 07:44:16 --> ErrorException: Undefined array key "room_name"
+[Method: GET, Route: event]
+in APPPATH\Views\events_view.php on line 31.
+ 1 APPPATH\Views\events_view.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "room_name"', 'C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\app\\Views\\events_view.php', 31)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\app\\Views\\events_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('events_view', [], true)
+ 5 APPPATH\Controllers\EventController.php(16): view('events_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EventController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EventController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+DEBUG - 2025-01-15 07:48:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 07:48:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 07:48:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 07:48:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 07:48:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 07:49:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 07:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-15 07:55:56 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "$1"
+[Method: GET, Route: guest/create/$1]
+in SYSTEMPATH\Router\Router.php on line 737.
+ 1 SYSTEMPATH\Router\Router.php(204): CodeIgniter\Router\Router->checkDisallowedChars('guest/create/$1')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('guest/create/$1')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 07:56:06 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "$1"
+[Method: GET, Route: guest/create/$1]
+in SYSTEMPATH\Router\Router.php on line 737.
+ 1 SYSTEMPATH\Router\Router.php(204): CodeIgniter\Router\Router->checkDisallowedChars('guest/create/$1')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('guest/create/$1')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 07:56:07 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "$1"
+[Method: GET, Route: guest/create/$1]
+in SYSTEMPATH\Router\Router.php on line 737.
+ 1 SYSTEMPATH\Router\Router.php(204): CodeIgniter\Router\Router->checkDisallowedChars('guest/create/$1')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('guest/create/$1')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 07:56:09 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "$1"
+[Method: GET, Route: guest/create/$1]
+in SYSTEMPATH\Router\Router.php on line 737.
+ 1 SYSTEMPATH\Router\Router.php(204): CodeIgniter\Router\Router->checkDisallowedChars('guest/create/$1')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('guest/create/$1')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 07:57:22 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "$1"
+[Method: GET, Route: guest/create/$1]
+in SYSTEMPATH\Router\Router.php on line 737.
+ 1 SYSTEMPATH\Router\Router.php(204): CodeIgniter\Router\Router->checkDisallowedChars('guest/create/$1')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('guest/create/$1')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 07:57:23 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "$1"
+[Method: GET, Route: guest/create/$1]
+in SYSTEMPATH\Router\Router.php on line 737.
+ 1 SYSTEMPATH\Router\Router.php(204): CodeIgniter\Router\Router->checkDisallowedChars('guest/create/$1')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('guest/create/$1')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 07:59:44 --> ArgumentCountError: Too few arguments to function App\Controllers\GuestController::index(), 0 passed in C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: guest]
+in APPPATH\Controllers\GuestController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GuestController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuestController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 07:59:45 --> ArgumentCountError: Too few arguments to function App\Controllers\GuestController::index(), 0 passed in C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: guest]
+in APPPATH\Controllers\GuestController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GuestController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuestController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 07:59:58 --> ArgumentCountError: Too few arguments to function App\Controllers\GuestController::index(), 0 passed in C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: guest]
+in APPPATH\Controllers\GuestController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GuestController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuestController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 07:59:58 --> ArgumentCountError: Too few arguments to function App\Controllers\GuestController::index(), 0 passed in C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: guest]
+in APPPATH\Controllers\GuestController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GuestController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuestController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 08:00:16 --> ErrorException: Undefined variable $eventId
+[Method: GET, Route: guest/create]
+in APPPATH\Views\create_guest.php on line 17.
+ 1 APPPATH\Views\create_guest.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $eventId', 'C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\app\\Views\\create_guest.php', 17)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\app\\Views\\create_guest.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('create_guest', [], true)
+ 5 APPPATH\Controllers\GuestController.php(24): view('create_guest')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GuestController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuestController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 08:00:37 --> ErrorException: Undefined variable $eventId
+[Method: GET, Route: guest/create]
+in APPPATH\Views\create_guest.php on line 17.
+ 1 APPPATH\Views\create_guest.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $eventId', 'C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\app\\Views\\create_guest.php', 17)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\app\\Views\\create_guest.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('create_guest', [], true)
+ 5 APPPATH\Controllers\GuestController.php(24): view('create_guest')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GuestController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuestController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 08:00:41 --> ErrorException: Undefined variable $eventId
+[Method: GET, Route: guest/create]
+in APPPATH\Views\create_guest.php on line 17.
+ 1 APPPATH\Views\create_guest.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $eventId', 'C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\app\\Views\\create_guest.php', 17)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\app\\Views\\create_guest.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('create_guest', [], true)
+ 5 APPPATH\Controllers\GuestController.php(24): view('create_guest')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GuestController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuestController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+DEBUG - 2025-01-15 08:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 08:03:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-15 08:04:07 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `gu...', 0)
+#1 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `gu...')
+#2 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `gu...')
+#3 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `gu...', Array, false)
+#4 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\app\Models\GuestModel.php(28): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\app\Controllers\GuestController.php(44): App\Models\GuestModel->addGuest(Array)
+#10 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\CodeIgniter.php(933): App\Controllers\GuestController->store()
+#11 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuestController))
+#12 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 C:\Users\Mahesa Agung Sejati\Documents\SEMESTER 6\Sertifikasi Kompetensi\Daftar Tamu\system\rewrite.php(44): require_once('C:\\Users\\Mahesa...')
+#17 {main}
+CRITICAL - 2025-01-15 08:04:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: guest/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `guests` (`event_id`, `name`, `email`, `message`, `created_at`, `updated_at`) VALUES (:event_id:, :name:, :email:, :message:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Models\GuestModel.php(28): CodeIgniter\BaseModel->save([...])
+ 7 APPPATH\Controllers\GuestController.php(44): App\Models\GuestModel->addGuest([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GuestController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuestController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 08:04:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `guests` (`event_id`, `name`, `email`, `message`, `created_at`, `updated_at`) VALUES (\'1\', \'Mahesa Agung Sejati\', \'mahesasejati95@gmail.com\', \'selamat\', \'2025-01-15 08:04:07\', \'2025-01-15 08:04:07\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `guests` (`event_id`, `name`, `email`, `message`, `created_at`, `updated_at`) VALUES (\'1\', \'Mahesa Agung Sejati\', \'mahesasejati95@gmail.com\', \'selamat\', \'2025-01-15 08:04:07\', \'2025-01-15 08:04:07\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `guests` (`event_id`, `name`, `email`, `message`, `created_at`, `updated_at`) VALUES (:event_id:, :name:, :email:, :message:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Models\GuestModel.php(28): CodeIgniter\BaseModel->save([...])
+ 9 APPPATH\Controllers\GuestController.php(44): App\Models\GuestModel->addGuest([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GuestController->store()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuestController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 08:04:07 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `guests` (`event_id`, `name`, `email`, `message`, `created_at`, `updated_at`) VALUES (\'1\', \'Mahesa Agung Sejati\', \'mahesasejati95@gmail.com\', \'selamat\', \'2025-01-15 08:04:07\', \'2025-01-15 08:04:07\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `guests` (`event_id`, `name`, `email`, `message`, `created_at`, `updated_at`) VALUES (\'1\', \'Mahesa Agung Sejati\', \'mahesasejati95@gmail.com\', \'selamat\', \'2025-01-15 08:04:07\', \'2025-01-15 08:04:07\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `guests` (`event_id`, `name`, `email`, `message`, `created_at`, `updated_at`) VALUES (\'1\', \'Mahesa Agung Sejati\', \'mahesasejati95@gmail.com\', \'selamat\', \'2025-01-15 08:04:07\', \'2025-01-15 08:04:07\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `guests` (`event_id`, `name`, `email`, `message`, `created_at`, `updated_at`) VALUES (:event_id:, :name:, :email:, :message:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Models\GuestModel.php(28): CodeIgniter\BaseModel->save([...])
+10 APPPATH\Controllers\GuestController.php(44): App\Models\GuestModel->addGuest([...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GuestController->store()
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuestController))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+DEBUG - 2025-01-15 08:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 08:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 08:09:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-15 13:08:58 --> ErrorException: Undefined array key "description"
+[Method: GET, Route: room]
+in APPPATH\Views\rooms_view.php on line 27.
+ 1 APPPATH\Views\rooms_view.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "description"', 'C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\app\\Views\\rooms_view.php', 27)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\app\\Views\\rooms_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('rooms_view', [], true)
+ 5 APPPATH\Controllers\RoomController.php(15): view('rooms_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RoomController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RoomController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+CRITICAL - 2025-01-15 13:19:26 --> ErrorException: Undefined variable $events
+[Method: GET, Route: room]
+in APPPATH\Views\rooms_view.php on line 104.
+ 1 APPPATH\Views\rooms_view.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $events', 'C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\app\\Views\\rooms_view.php', 104)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\app\\Views\\rooms_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('rooms_view', [], true)
+ 5 APPPATH\Controllers\RoomController.php(15): view('rooms_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RoomController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RoomController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Mahesa Agung Sejati\\Documents\\SEMESTER 6\\Sertifikasi Kompetensi\\Daftar Tamu\\public\\index.php')
+DEBUG - 2025-01-15 13:48:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 13:53:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 13:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 13:54:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 13:54:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 13:54:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 13:55:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 13:56:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 13:57:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 13:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 13:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 13:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:05:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:05:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:08:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:09:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:09:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:09:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:09:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:10:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:10:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:13:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 14:14:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
